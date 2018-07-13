@@ -1,0 +1,14 @@
+#! /bin/bash
+
+file=$1
+
+docker run -it -v /data/height:/opt/data/height geodata/gdal gdal_translate -of GTiff /opt/data/height/"$file".tif /opt/data/height/modif/"$file".asc
+
+docker run -it -v /data/height:/opt/data/height geodata/gdal gdal_translate -of XYZ /opt/data/height/modif/"$file".asc /opt/data/height/modif/"$file".xyz
+
+cd /data/height/modif ; rm "$file".asc ; txt2las -i "$file".xyz -o "$file".las -parse xyz ; mv "$file".las /data/height/las2 ; cd /data 
+
+
+
+
+

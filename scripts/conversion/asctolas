@@ -1,0 +1,28 @@
+#! /bin/bash
+#tiftolas
+
+touch temp.json
+name=$1
+
+
+cat <<EOF > "temp.json"
+
+{
+  "pipeline":[
+    {
+      "type":"readers.gdal",
+      "filename":"/opt/data/data/height/modif/$name.asc"
+    },
+    {
+      "type":"writers.las",
+      "filename":"/opt/data/data/height/las/$name.las"
+    }
+  ]
+}
+EOF
+
+docker run -v ~/pdal:/opt/data -v ~/pdal/data:/opt/data/data -v ~/pdal/data/height/:/opt/data/data/height -t pdal/pdal pdal pipeline /opt/data/data/temp.json
+
+rm temp.json
+
+

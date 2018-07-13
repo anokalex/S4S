@@ -1,0 +1,4 @@
+#! /bin/bash
+
+
+docker run -it -v ~/entwine:/opt/data -v ~/entwine/data:/opt/data/data -v ~/entwine/data/Netherlands:/opt/data/data/Netherlands connormanning/entwine convert --truncate -i /opt/data/data/EPT -o /opt/data/data/Netherlands/cesium

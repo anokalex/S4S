@@ -1,0 +1,4 @@
+#! /bin/bash
+
+
+docker run -it -v ~/entwine:/opt/data -v ~/entwine/data:/opt/data/data connormanning/entwine build -i /opt/data/data/docker-las2/ -o /opt/data/data/EPT2 -r EPSG:4978
