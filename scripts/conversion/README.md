@@ -17,7 +17,13 @@ Activity
 
 Problem: resulting files lacking GPS data, not visualizable in Cesium --> Troubleshooting => Time loss
 
---> Third approach: Using cesium-terrain-build to convert the tif files to terrain files, normally visualizable with Cesium : Error of visualization
+--> Third approach: 
+ 
+ * Using cesium-terrain-builder (https://github.com/geo-data/cesium-terrain-builder/) to convert the tif files to terrain files, normally visualizable with Cesium : resulting files in data/tilesets
+
+* Visualizing the data using cesium-terrain-server (https://github.com/geo-data/cesium-terrain-server) : NOT WORKING
+
+
 
 
 2. Las files in the second dataset
