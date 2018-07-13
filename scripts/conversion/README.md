@@ -9,7 +9,9 @@ Activity
 --> convert3DT : convert the EPT files to 3D Tiles files, to be viewed in Cesium
 
 
-1. First dataset contains tif files 
+
+
+2. First dataset contains tif files 
 
 --> First approach: Writing of a script converting the tif files to asc files (modifytif) , and then of a script converting the asc files to las files (asctolas)
 
@@ -26,7 +28,7 @@ Problem: resulting files lacking GPS data, not visualizable in Cesium --> Troubl
 
 
 
-2. Las files in the second dataset
+3. Las files in the second dataset
 
 --> Launching the conversion scripts on those files
  Problem: resulting files lacking GPS data, not visualizable in Cesium 
